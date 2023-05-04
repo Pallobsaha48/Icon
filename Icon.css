@@ -1,0 +1,67 @@
+# Icon
+$ringcolor: #00dbfb;
+
+.bindi {
+  position: relative;
+  height: 29px;
+  width: 29px;
+  background: $ringcolor;
+  border-radius: 100%;
+  transform: rotate(30deg);
+  transition: all 10s;
+
+  &:hover {
+    transform: rotate(1230deg);
+  }
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 550%;
+  width: 180%;
+  border: 8px solid $ringcolor;
+  border-radius: 100%;
+}
+
+@for $i from 1 to 3 {
+  .ring:nth-child(#{$i}) {
+    transform: translate(-50%, -50%) rotate(#{$i * 60}deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 280px;
+  width: 280px;
+  background: #292929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 100%;
+  box-shadow: 0 5px 5px rgba(0,0,0, 0.25);
+}
